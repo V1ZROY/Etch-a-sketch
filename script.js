@@ -1,13 +1,10 @@
 let sketchpad = document.getElementById("sketchpad");
 let size = 8;//Set width of canvas, will eventually want this to be user editable
+let mode = "blackpen";
 
 function write(e){
-
-    if(e.pressure != 0) {
-        this.classList.add("clicked")
-    }
-    if(e.type == 'mousedown') {
-        this.classList.add("clicked")
+    if(e.pressure != 0 | e.type == 'mousedown') {
+        if (mode = "blackpen"){this.classList.add("blackpen")};
     }
 }
 

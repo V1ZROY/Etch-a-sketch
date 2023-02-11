@@ -1,5 +1,6 @@
 #sketchpad{
     display: grid;
+    gap: 0px;
     height: 500px;
     width: 500px;
     margin: auto;
@@ -7,13 +8,14 @@
 
 .pixel{
     margin: 0px;
-    border-color: black;
-    border: solid;
-    border-width: 1px;
+    margin-left: -1px;
+    margin-top: -1px;
+    border: 1px solid rgb(197, 197, 197);
     width: auto;
     height: auto;
 }
 
-.clicked{
+.blackpen{
     background-color: black;
+    border: none;
 }
