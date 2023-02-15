@@ -11,7 +11,7 @@ let mode;
 let pixels;
 
 function write(e){
-    if(e.pressure != 0 | e.type == 'mousedown') {
+    if(e.pressure != 0 | e.type == 'mousedown' | e.type == 'touchmove') {
         if (mode == "blackpen"){
             this.style.backgroundColor = "rgb(0, 0, 0)";
             this.style.border = 'none';
@@ -79,6 +79,7 @@ function generate(size){
     pixels = document.querySelectorAll(".pixel")
     pixels.forEach(element => {element.addEventListener('pointerover', write);});
     pixels.forEach(element => {element.addEventListener('mousedown', write);});
+    pixels.forEach(element => {element.addEventListener('touchmove', write);});
 }
 
 generate(size);
