@@ -8,9 +8,20 @@
         <link rel="stylesheet" href="./style.css">
         <script src="./script.js" defer></script>
     </head>
-    <body>
+    <body ondragstart="return false;" ondrop="return false;"> <!--Stops browser thinking I am trying to drag and drop the pixel when drawing-->
+        
         <div id="settings">
             <h1>V's etch-a-sketch</h1>
+            <div class="slidecontainer">
+                <h2 id="canvassize"></h2>
+                <input type="range" min= "4" max="64" value="16" class="sizeslider" id="sizerange">
+                <button id="reset">Generate new canvas</button>
+            </div>
+            <div id="buttons">
+                <button id="rainbow">Rainbow</button>
+                <button id="eraser">Eraser</button>
+                <button id="blackpen">Black pen</button>
+            </div>
         </div>
         <div id="sketchpad">
         </div>
